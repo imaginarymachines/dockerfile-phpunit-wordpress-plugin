@@ -36,5 +36,5 @@ jobs:
           tags: josh412/wp-phpunit:latest
           #https://andrei-calazans.com/posts/2021-06-23/passing-secrets-github-actions-docker
           secrets: |
-            "WORDPRESS_VERSION=${{ matrix.wp-version }}"
-            "PHP_IMAGE_TAG=${{ matrix.php-version }}"
+            "WORDPRESS_VERSION=5.9"
+            "PHP_IMAGE_TAG=7.2"
