@@ -30,12 +30,14 @@ const build = ({ phpVersion, wordpressVersion, tag }) => {
 	}
 };
 
-function main() {
-	phpVersions.forEach((phpVersion) => {
-		wordPressVersions.forEach((wordpressVersion) =>
-			build({ phpVersion, wordpressVersion, tag: true })
-		);
-	});
+let push = false;
+if (process.argv.length >= 2) {
+	if ("--tag" == process.argv[2]) {
+		push = true;
+	}
 }
-
-main();
+phpVersions.forEach((phpVersion) => {
+	wordPressVersions.forEach((wordpressVersion) =>
+		build({ phpVersion, wordpressVersion, push })
+	);
+});
