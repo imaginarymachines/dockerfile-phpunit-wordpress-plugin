@@ -1,0 +1,22 @@
+[
+  {
+    "tagName": "josh412/wp-phpunit:php-8.1-wp-latest",
+    "phpVersion": "8.1",
+    "wordpressVersion": "latest"
+  },
+  {
+    "tagName": "josh412/wp-phpunit:latest",
+    "phpVersion": "7.4",
+    "wordpressVersion": "latest"
+  },
+  {
+    "tagName": "josh412/wp-phpunit:latest",
+    "phpVersion": "7.4",
+    "wordpressVersion": "latest"
+  },
+  {
+    "tagName": "josh412/wp-phpunit:latest",
+    "phpVersion": "7.4",
+    "wordpressVersion": "latest"
+  }
+]

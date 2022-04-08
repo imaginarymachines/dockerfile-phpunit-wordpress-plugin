@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: examplepass
     image: mysql:${MYSQL_VERSION:?err}
 
-  sut:
+  phpunit:
     build:
       context: .
       args:
@@ -16,7 +16,7 @@ services:
     command:
       - sh
       - -c
-      - "phpunit --version && phpcs --version"
+      - "phpunit --version && phpcs --version && php --version"
     depends_on:
       - database
     environment:
