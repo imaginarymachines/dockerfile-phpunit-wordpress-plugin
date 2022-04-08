@@ -1,26 +1,10 @@
-<!-- markdownlint-disable first-line-h1 -->
-[![docker build automated?](https://img.shields.io/docker/cloud/automated/futureys/phpunit-wordpress-plugin.svg)](https://hub.docker.com/r/futureys/phpunit-wordpress-plugin/builds)
-[![docker build passing?](https://img.shields.io/docker/cloud/build/futureys/phpunit-wordpress-plugin.svg)](https://hub.docker.com/r/futureys/phpunit-wordpress-plugin/builds)
-[![image size and number of layers](https://images.microbadger.com/badges/image/futureys/phpunit-wordpress-plugin.svg)](https://hub.docker.com/r/futureys/phpunit-wordpress-plugin/dockerfile)
+# WordPress phpunit Container
 
-# Quick reference
+[![docker build automated?](https://img.shields.io/docker/cloud/automated/josh412/wp-phpunit.svg)](https://hub.docker.com/r/josh412/wp-phpunit/builds)
+[![docker build passing?](https://img.shields.io/docker/cloud/build/josh412/wp-phpunit.svg)](https://hub.docker.com/r/josh412/wp-phpunit/builds)
+[![image size and number of layers](https://images.microbadger.com/badges/image/josh412/wp-phpunit.svg)](https://hub.docker.com/r/josh412/wp-phpunit/dockerfile)
 
-- **Reference materials**:
-
-  [Plugin Unit Tests – WP-CLI — WordPress.org](https://make.wordpress.org/cli/handbook/plugin-unit-tests/#running-tests-locally)
-
-<!-- markdownlint-disable no-trailing-punctuation -->
-# What is PHPUnit WordPress Plugin?
-<!-- markdownlint-enable no-trailing-punctuation -->
-
-This is PHPUnit environment for WordPress Plugin.
-
-# How to use this image
-
-This image is depend on [mysql - Docker Hub](https://hub.docker.com/_/mysql)
-and intended to use by Docker Compose.
-
-## ... via docker-compose
+## How To
 
 Example docker-compose.yml for mysql:
 
@@ -40,11 +24,11 @@ services:
       - database
     environment:
       DATABASE_PASSWORD: examplepass
-    image: futureys/phpunit-wordpress-plugin
+    image: josh412/wp-phpunit
     stdin_open: true
     tty: true
     volumes:
-      - ${PATH_TO_PLUGIN_DIRECTORY}:/plugin
+      - ./:/plugin
 ```
 
 Example .env:
